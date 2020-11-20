@@ -49,6 +49,9 @@ const Styledh1 = styled.h1`
 	text-align: center;
 	margin: 10rem 0rem;
 	color: #333;
+	@media(max-width: 600px){
+		margin: 5rem 0rem;
+	}
 `
 
 const StyledGallery = styled.div`
@@ -61,6 +64,12 @@ const StyledGallery = styled.div`
 		height: auto;
 		margin: 0.5rem;
 		object-fit: cover;
+		@media(max-width: 768px){
+			width: 40%;
+		}
+		@media(max-width: 425px){
+			width: 100%;
+		}
 	}
 `
 

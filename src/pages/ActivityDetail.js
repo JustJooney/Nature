@@ -42,6 +42,9 @@ const StyledDetail = styled(motion.div)`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@media(max-width:768px){
+		width: 100%;
+	}
 	h1{
 		font-size: 5rem;
 		margin: 2rem;

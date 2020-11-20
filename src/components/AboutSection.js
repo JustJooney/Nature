@@ -28,7 +28,10 @@ const StyledAbout = styled(motion.div)`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	overflow-y:hidden;
+	@media(max-width:768px){
+
+
+	}
 	h1{
 		font-size: 6rem;
 		color: white;

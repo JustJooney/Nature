@@ -4,7 +4,7 @@ import camping1 from '../img/camping1.jpg';
 import birdwatching1 from '../img/birdwatching1.jpg';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
-import {fadeUp, pageAnimation, fadeRight, fadeLeft} from '../animation';
+import {fadeUp, pageAnimation} from '../animation';
 import {Hide} from '../styles';
 
 
@@ -20,16 +20,18 @@ function ActivitySection(){
 						<h2>Hiking</h2>
 					</Link>
 				</motion.section>
-				<motion.section className='camping'  variants={fadeUp}>
+				<motion.section className='camping' variants={fadeUp}>
 					<Link to='/activity/camping'>
 					<h2>Camping</h2>
 					</Link>
 				</motion.section>
+
 				<motion.section className='birdwatching' variants={fadeUp}>
 					<Link to='/activity/birdwatching'>
 						<h2>Bird Watching</h2>
 					</Link>
 				</motion.section>
+
 			</Activity>
 		</motion.div>
 	)
@@ -49,6 +51,7 @@ const Activity = styled(motion.div)`
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	flex-wrap: wrap;
 	margin: 2rem;
 	overflow: hidden;
 	section{
@@ -56,7 +59,7 @@ const Activity = styled(motion.div)`
 		overflow: hidden;
 		color: #333;
 		height: 25rem;
-		width: 30%;
+		width: 25rem;
 		box-shadow: 0 10px 20px gray;
 		text-align: center;
 		cursor: pointer;
@@ -68,6 +71,11 @@ const Activity = styled(motion.div)`
 		background-size: cover;
 		filter: grayscale(100%);
 		transition: 200ms;
+		@media (max-width: 768px){
+			text-align: center;
+			width: 100%;
+			filter:grayscale(0);
+		}
 		&:hover{
 			filter: grayscale(0);
 			h2{

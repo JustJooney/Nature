@@ -45,6 +45,13 @@ const StyledContact = styled.div`
 		width: 30rem;
 		height: 45rem;
 		background: white;
+		@media(max-width: 768px){
+			margin-right: 0;
+			margin: auto;
+		}
+		@media(max-width: 425px){
+			width: 100%;
+		}
 		h2{
 			margin:1.3rem auto;
 		}
@@ -77,7 +84,9 @@ const StyledContact = styled.div`
 			font-size: 1.3rem;
 			color: white;
 		}
-
+		input, button, label, textarea{
+			margin: auto;
+		}
 	}
 `
 
