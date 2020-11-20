@@ -29,7 +29,7 @@ function Nav(){
 
 const NavBar = styled.nav`
 	background-color: white;
-	position: fixed;
+	position: sticky;
 	width: 100%;
 	top: 0;
 	min-height: 8vh;

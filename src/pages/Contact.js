@@ -1,11 +1,12 @@
 import Footer from '../components/Footer';
 import styled from 'styled-components';
 import camping2 from '../img/camping2.jpg';
-
+import {motion} from 'framer-motion';
+import {pageAnimation} from '../animation';
 
 function Contact(){
 	return(	
-		<>
+		<motion.div variants={pageAnimation} initial="hidden" animate="show" exit="exit">
 			<StyledContact>
 				<form>
 					<h2>Contact Us</h2>
@@ -20,12 +21,12 @@ function Contact(){
 					<button>Submit</button>
 				</form>
 			</StyledContact>
-		</>
+		</motion.div>
 	)
 }
 
 const StyledContact = styled.div`
-	height: 100vh;
+	min-height: 92vh;
 	background-image: url(${camping2});
 	background-position: center;
 	background-size: cover;
@@ -41,7 +42,6 @@ const StyledContact = styled.div`
 		justify-content: space-around;
 		align-items: flex-start;
 		margin-right: 5%;
-		margin-top: 5%;
 		width: 30rem;
 		height: 45rem;
 		background: white;

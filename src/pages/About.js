@@ -1,10 +1,12 @@
 import AboutSection from '../components/AboutSection';
+import {motion} from 'framer-motion';
+import {pageAnimation} from '../animation';
 
 function About(){
 	return(
-		<div>
+		<motion.div variants={pageAnimation} initial="hidden" animate="show" exit="exit">
 			<AboutSection/>
-		</div>
+		</motion.div>
 	)
 }
 

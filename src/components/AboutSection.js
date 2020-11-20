@@ -1,22 +1,28 @@
 import styled from 'styled-components';
 import forest from '../img/forest.jpg';
 import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {fadeUp} from '../animation';
+import {Hide} from '../styles';
 
 function AboutSection(){
 	return(
 		<StyledAbout >
-			<h1>Nature</h1>
-			<button><Link to='/gallery'>Gallery</Link></button>
+			<Hide>
+				<motion.h1 variants={fadeUp}>Nature</motion.h1>
+			</Hide>
+			<Hide>
+				<motion.button variants={fadeUp}><Link to='/gallery'>Gallery</Link></motion.button>
+			</Hide>
 		</StyledAbout>
 	)
 }
 
-const StyledAbout = styled.div`
+const StyledAbout = styled(motion.div)`
 	background-image: url(${forest});
 	background-repeat: no-repeat;
 	background-position: center;
-	object-fit: cover;
-	min-height: 100vh;
+	min-height: 92vh;
 	font-size: 2rem;
 	display: flex;
 	flex-direction: column;
@@ -48,6 +54,7 @@ const StyledAbout = styled.div`
 		}
 	}
 `
+
 
 
 export default AboutSection;

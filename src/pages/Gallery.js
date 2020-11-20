@@ -15,10 +15,12 @@ import hiking4 from '../img/hiking4.jpg';
 import hiking5 from '../img/hiking5.jpg';
 import hiking6 from '../img/hiking6.jpg';
 import hiking7 from '../img/hiking7.jpg';
+import {motion} from 'framer-motion';
+import {pageAnimation} from '../animation';
 
 function Gallery(){
 	return(
-		<>
+		<motion.div variants={pageAnimation} initial="hidden" animate="show" exit="exit">
 			<Styledh1>Gallery</Styledh1>
 			<StyledGallery>
 				<img src={birdwatching2} alt="birdwatching2" />
@@ -37,9 +39,8 @@ function Gallery(){
 				<img src={hiking5} alt="hiking5" />
 				<img src={hiking6} alt="hiking6" />
 				<img src={hiking7} alt="hiking7" />
-
 			</StyledGallery>
-		</>
+		</motion.div>
 	)
 }
 
