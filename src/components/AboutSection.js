@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 function AboutSection(){
 	return(
 		<StyledAbout >
-			<h1>Nature Hike</h1>
+			<h1>Nature</h1>
 			<button><Link to='/gallery'>Gallery</Link></button>
 		</StyledAbout>
 	)

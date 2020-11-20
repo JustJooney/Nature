@@ -10,7 +10,7 @@ function Nav(){
 		<NavBar>
 			<Title>
 				<Link to='/'><FontAwesomeIcon id='leaf' icon={faLeaf} size='2x'/></Link>
-				<h1><Link to='/'>Nature Hike</Link></h1>
+				<h1><Link to='/'>Nature</Link></h1>
 			</Title>
 			<ul>
 				<li>
